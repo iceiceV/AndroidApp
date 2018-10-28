@@ -24,53 +24,47 @@
                 android:layout_gravity="center_horizontal"
                 android:contentDescription="@string/icedevice_icon"/>
 
-            <RelativeLayout
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1">
+            <!--  Name Label -->
+            <EditText android:id="@+id/input_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:hint="@string/username_field" />
 
-                <com.google.android.gms.common.SignInButton
-                    android:id="@+id/btn_google_login"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:visibility="visible"
-                    tools:visibility="gone" />
-
-            </RelativeLayout>
             <!-- Email Label -->
             <EditText android:id="@+id/input_email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
-                    android:hint="@string/email_field"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="@string/email_field"/>
 
             <!-- Password Label -->
             <EditText android:id="@+id/input_password"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    android:hint="@string/password_field"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="@string/password_field"/>
 
+            <!-- Signup Button -->
             <android.support.v7.widget.AppCompatButton
-                android:id="@+id/btn_login"
+                android:id="@+id/btn_signup"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="24dp"
                 android:padding="12dp"
-                android:text="@string/login_button"/>
+                android:text="@string/create_account_button"/>
 
-            <TextView android:id="@+id/link_signup"
+            <TextView android:id="@+id/link_login"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
-                android:text="@string/not_a_member_button"
+                android:text="@string/member_button"
                 android:gravity="center"
                 android:textSize="16sp"/>
         </LinearLayout>
         <ProgressBar
-            android:id="@+id/pb_login"
+            android:id="@+id/pb_signup"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="center"

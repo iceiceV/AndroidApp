@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "462228178580",
+    "firebase_url": "https://icedevice-7a28a.firebaseio.com",
+    "project_id": "icedevice-7a28a",
+    "storage_bucket": "icedevice-7a28a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462228178580:android:255a6215d3497501",
+        "android_client_info": {
+          "package_name": "com.ice.android.icedevice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462228178580-qlt9k32bhn9e8bds1l2vn82o565c9ct3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcufwVeRcHsYkgTFgcyhS71xiAiKgvGbo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

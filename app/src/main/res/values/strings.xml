@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">ICEDevice</string>
+
+    <!-- Login and signup activities -->
+    <string name="username_field">Username</string>
+    <string name="email_field">Email</string>
+    <string name="email_example">e.g. name@company.com</string>
+    <string name="password_field">Password</string>
+    <string name="create_account_button">Create Account</string>
+    <string name="member_button">Already a member? Login</string>
+    <string name="not_a_member_button">No account yet? Create one</string>
+    <string name="login_button">Login</string>
+
+    <!-- Content descriptions -->
+    <string name="icedevice_icon">ICEDevice icon</string>
 </resources>
