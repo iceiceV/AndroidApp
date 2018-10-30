@@ -10,14 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
 public class NavigationFragment extends Fragment {
     private static final String TAG = NavigationFragment.class.getSimpleName();
 
-    //@BindView(R.id.live_data_button) Button liveDataButton;
-    //@BindView(R.id.view_record_button) Button viewRecordButton;
+    OnConnectionRequestListener mCallback;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -32,6 +28,7 @@ public class NavigationFragment extends Fragment {
         //ButterKnife.bind(mView);
         Button liveDataButton = mView.findViewById(R.id.live_data_button);
         Button viewRecordButton = mView.findViewById(R.id.view_record_button);
+        Button connectDeviceButton = mView.findViewById(R.id.connect_device_button);
 
         liveDataButton.setOnClickListener((View v) -> {
             // TODO: Show live data graph
@@ -39,6 +36,11 @@ public class NavigationFragment extends Fragment {
 
         viewRecordButton.setOnClickListener((View v) -> {
             // TODO: Show record
+        });
+
+        connectDeviceButton.setOnClickListener((View v) -> {
+            // TODO: Connect to device
+            mCallback.onBleConnectionRequest();
         });
 
         return mView;
@@ -52,5 +54,18 @@ public class NavigationFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+
+        // This makes sure that the container activity has implemented
+        // the callback interface. If not, it throws an exception
+        try {
+            mCallback = (OnConnectionRequestListener) context;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(context.toString()
+                    + " must implement OnConnectionRequestListener");
+        }
+    }
+
+    public interface OnConnectionRequestListener {
+        public void onBleConnectionRequest();
     }
 }
