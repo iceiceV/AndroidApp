@@ -24,6 +24,7 @@
         </activity>
         <activity android:name=".LoginActivity" android:theme="@style/AppTheme" />
         <activity android:name=".SignupActivity" android:theme="@style/AppTheme" />
+        <service android:name=".BleService" android:enabled="true" />
     </application>
 
 </manifest>
